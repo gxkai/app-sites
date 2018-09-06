@@ -9,12 +9,28 @@
             </v-toolbar>
             <v-content>
                 <v-container fluid>
-                    <router-view></router-view>
+                    <v-card height="70px">
+                        <v-container
+                                align-center="true"
+                                justify-start="true"
+                                d-flex="true">
+                            <v-avatar size="36px">
+                                <img
+                                        src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                        alt="Avatar"
+                                >
+                            </v-avatar>
+                            <div class="d-flex">
+                                <div>1</div>
+                                <div>2</div>
+                            </div>
+                        </v-container>
+                    </v-card>
                 </v-container>
             </v-content>
             <v-bottom-nav
-                    active.sync="dialogue"
-                    value="true"
+                    active.sync="center"
+                    :value="true"
                     absolute
                     color="transparent"
             >
@@ -78,7 +94,6 @@
 	  computed: {},
 	  data() {
 	    return {
-	      bottomNav: 'dialogue'
 	    };
 	  },
 	  created() {

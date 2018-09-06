@@ -13,7 +13,7 @@
                 </v-container>
             </v-content>
             <v-bottom-nav
-                    active.sync="dialogue"
+                    active.sync="communication"
                     value="true"
                     absolute
                     color="transparent"
@@ -78,7 +78,6 @@
 	  computed: {},
 	  data() {
 	    return {
-	      bottomNav: 'dialogue'
 	    };
 	  },
 	  created() {
