@@ -31,6 +31,11 @@ export default new Router({
       component: () => import('./views/Center.vue')
     },
     {
+      path: '/Home',
+      name: '我的主页',
+      component: () => import('./views/Home.vue')
+    },
+    {
       path: '/login',
       name: '登陆',
       component: () => import('./views/Login.vue')

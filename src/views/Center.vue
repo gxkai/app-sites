@@ -8,24 +8,82 @@
                 <v-toolbar-title>{{$route.name}}</v-toolbar-title>
             </v-toolbar>
             <v-content>
-                <v-container fluid>
-                    <v-card height="70px">
-                        <v-container
-                                align-center="true"
-                                justify-start="true"
-                                d-flex="true">
-                            <v-avatar size="36px">
-                                <img
-                                        src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                        alt="Avatar"
-                                >
-                            </v-avatar>
-                            <div class="d-flex">
-                                <div>1</div>
-                                <div>2</div>
-                            </div>
-                        </v-container>
-                    </v-card>
+                <v-container
+                        fluid
+                        grid-list-lg
+                >
+                    <v-layout row wrap>
+                        <v-flex xs12>
+                            <v-card color="white" class="black--text">
+                                <v-card-actions>
+                                    <img src="../assets/img/head.jpeg"
+                                         style="border-radius: 50%"
+                                         height="55px"
+                                         width="55px">
+                                    <div class="ml-2">
+                                        <p class="body-2 mb-0">{{$store.state.account.nickname}}</p>
+                                        <p class="body-1 mb-0 grey--text">{{$store.state.account.mood}}</p>
+                                    </div>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-flex>
+                        <v-flex xs12>
+                            <v-card color="white" class="white--text">
+                                <v-card-actions>
+                                    <v-btn flat class="subheading font-weight-regular">账号与安全</v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                                <v-divider></v-divider>
+                                <v-card-actions>
+                                    <v-btn flat class="subheading font-weight-regular">通知与管理</v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                                <v-divider></v-divider>
+                                <v-card-actions>
+                                    <v-btn flat class="subheading font-weight-regular">聊天与管理</v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-flex>
+
+                        <v-flex xs12>
+                            <v-card color="white" class="white--text">
+                                <v-card-actions>
+                                    <v-btn flat class="subheading font-weight-regular">设置</v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-flex>
+
+                        <v-flex xs12>
+                            <v-card color="white" class="white--text">
+                                <v-card-actions>
+                                    <v-btn flat class="subheading font-weight-regular">我的主页</v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon to="/home">
+                                        <v-icon color="#C4C4C4">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+
                 </v-container>
             </v-content>
             <v-bottom-nav
@@ -33,6 +91,7 @@
                     :value="true"
                     absolute
                     color="transparent"
+                    app
             >
                 <v-btn
                         color="teal"
@@ -93,8 +152,7 @@
 	  watch: {},
 	  computed: {},
 	  data() {
-	    return {
-	    };
+	    return {};
 	  },
 	  created() {
 	  },
